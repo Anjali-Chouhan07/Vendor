@@ -1,0 +1,97 @@
+.growth-page {
+  padding: 20px;
+  background: var(--background, #f9fafb);
+  color: #222;
+  min-height: 100vh;
+}
+
+/* Top boxes */
+.growth-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.growth-card {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: 0.3s;
+}
+
+.growth-card:hover {
+  transform: translateY(-3px);
+}
+
+.growth-card h3 {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.growth-card p {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.loss { border-left: 5px solid #ef4444; }
+.profit { border-left: 5px solid #22c55e; }
+.risk { border-left: 5px solid #f59e0b; }
+.days { border-left: 5px solid #3b82f6; }
+
+/* Graph and Table */
+.growth-table {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.growth-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.growth-filters button {
+  background: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.growth-filters button:hover {
+  background: #4338ca;
+}
+
+.growth-graph {
+  margin-bottom: 20px;
+}
+
+.growth-data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.growth-data-table th,
+.growth-data-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+.positive {
+  color: #22c55e;
+}
+
+.negative {
+  color: #ef4444;
+}
