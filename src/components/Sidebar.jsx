@@ -1,11 +1,17 @@
 import React from 'react';
-import { FaHome, FaCalendarAlt, FaBox, FaShoppingCart, FaChartLine } from 'react-icons/fa';
+import {
+  FaHome,
+  FaBox,
+  FaShoppingCart,
+  FaChartLine,
+  FaExchangeAlt, // 🔁 new return icon
+} from 'react-icons/fa';
 
 const items = [
   { key: 'home', label: 'Home', icon: <FaHome /> },
-  { key: 'today', label: 'Today', icon: <FaCalendarAlt /> },
   { key: 'listings', label: 'Listings', icon: <FaBox /> },
   { key: 'orders', label: 'Orders', icon: <FaShoppingCart /> },
+  { key: 'returns', label: 'Returns', icon: <FaExchangeAlt /> }, // updated icon
   { key: 'growth', label: 'Growth', icon: <FaChartLine /> },
 ];
 
@@ -21,8 +27,8 @@ export default function Sidebar({ active, setActive }) {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        justifyContent: 'center', // Center buttons vertically
-        backgroundColor: '#1e40af', // Darker navy background
+        justifyContent: 'center',
+        backgroundColor: '#1e40af',
       }}
     >
       {items.map((i) => (
@@ -36,7 +42,7 @@ export default function Sidebar({ active, setActive }) {
             flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
-            gap: '6px', 
+            gap: '6px',
             backgroundColor: active === i.key ? '#2563eb' : 'transparent',
             border: 'none',
             color: '#fff',
@@ -46,7 +52,8 @@ export default function Sidebar({ active, setActive }) {
           }}
           onMouseEnter={(e) => (e.currentTarget.style.background = '#3b82f6')}
           onMouseLeave={(e) =>
-            (e.currentTarget.style.background = active === i.key ? '#2563eb' : 'transparent')
+            (e.currentTarget.style.background =
+              active === i.key ? '#2563eb' : 'transparent')
           }
         >
           <span style={{ fontSize: '20px' }}>{i.icon}</span>
